@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 LABEL GeoNode development team
 
-RUN mkdir -p /usr/src/{{project_name}}
+RUN mkdir -p /usr/src/geonode_app
 
 ## Enable postgresql-client-13
 RUN apt-get update -y && apt-get install curl wget unzip gnupg2 -y
@@ -41,8 +41,8 @@ RUN pip install pylibmc \
     && pip install sherlock
 
 # add bower and grunt command
-COPY src /usr/src/{{project_name}}/
-WORKDIR /usr/src/{{project_name}}
+COPY src /usr/src/geonode_app/
+WORKDIR /usr/src/geonode_app
 
 COPY src/monitoring-cron /etc/cron.d/monitoring-cron
 RUN chmod 0644 /etc/cron.d/monitoring-cron
@@ -52,8 +52,8 @@ RUN service cron start
 
 COPY src/wait-for-databases.sh /usr/bin/wait-for-databases
 RUN chmod +x /usr/bin/wait-for-databases
-RUN chmod +x /usr/src/{{project_name}}/tasks.py \
-    && chmod +x /usr/src/{{project_name}}/entrypoint.sh
+RUN chmod +x /usr/src/geonode_app/tasks.py \
+    && chmod +x /usr/src/geonode_app/entrypoint.sh
 
 COPY src/celery.sh /usr/bin/celery-commands
 RUN chmod +x /usr/bin/celery-commands
@@ -77,4 +77,4 @@ RUN rm -rf /var/lib/apt/lists/*
 EXPOSE 8000
 
 # We provide no command or entrypoint as this image can be used to serve the django project or run celery tasks
-# ENTRYPOINT /usr/src/{{project_name}}/entrypoint.sh
+# ENTRYPOINT /usr/src/geonode_app/entrypoint.sh

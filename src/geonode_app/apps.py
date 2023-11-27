@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #########################################################################
 #
-# Copyright (C) 2017 OSGeo
+# Copyright (C) 2018 OSGeo
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,15 +17,25 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 #########################################################################
-
 import os
+from django.apps import AppConfig as BaseAppConfig
 
-__version__ = (4, 0, 0, 'final', 0)
+def run_setup_hooks(*args, **kwargs):
+    from django.conf import settings
+    from .celeryapp import app as celeryapp
 
+    LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
+    settings.TEMPLATES[0]["DIRS"].insert(0, os.path.join(LOCAL_ROOT, "templates"))
 
-default_app_config = "{{project_name}}.apps.AppConfig"
+    if celeryapp not in settings.INSTALLED_APPS:
+        settings.INSTALLED_APPS += (celeryapp,)
 
+class AppConfig(BaseAppConfig):
 
-def get_version():
-    import {{project_name}}.version
-    return {{project_name}}.version.get_version(__version__)
+    name = "geonode_app"
+    label = "geonode_app"
+
+    def ready(self):
+        super(AppConfig, self).ready()
+        run_setup_hooks()
+
