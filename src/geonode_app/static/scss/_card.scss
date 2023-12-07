@@ -9,4 +9,16 @@
   .gn-card-view-editor a {
     font-size: 13px;
   }
+
+  .gn-card-title {
+    font-weight: 500;
+  }
+
+  .card-title a:hover {
+    text-decoration: none;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
 }
