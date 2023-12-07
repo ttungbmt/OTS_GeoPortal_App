@@ -1,3 +1,23 @@
+.site-title {
+  font-weight: 700;
+  font-size: 30px;
+
+  span:nth-child(1) {
+    color: $secondary;
+    margin: 0 0 0 8px!important;
+  }
+
+  span:nth-child(2) {
+    color: $primary;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gn-menu-content-right {
+    flex-grow: 0!important;
+  }
+}
+
 /* gn-details-panel */
 
 .msgapi .gn-details-info-fields {
