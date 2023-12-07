@@ -1,4 +1,4 @@
-// gn-details-panel
+/* gn-details-panel */
 
 .msgapi .gn-details-info-fields {
   .gn-details-info-row {
@@ -15,7 +15,7 @@
   }
 }
 
-// legend
+/* Legend */
 
 .msgapi .gn-legend-wrapper {
   border-radius: var(--#{$prefix}border-radius);
@@ -24,3 +24,6 @@
 .msgapi .gn-action-navbar-title {
   border-radius: var(--#{$prefix}border-radius);
 }
+
+@import "geonode/hero"
+

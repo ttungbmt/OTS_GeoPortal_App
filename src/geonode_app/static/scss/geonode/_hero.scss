@@ -1,0 +1,17 @@
+.msgapi .gn-hero {
+  background-color: rgb(156 156 156 / 33%)!important;
+
+  .jumbotron {
+    .gn-hero-description h1 {
+      font-weight: 500;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .msgapi .jumbotron {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}

@@ -5,6 +5,7 @@
 .msgapi .gn-theme {
   --#{$prefix}main-color: #091e42;
   --#{$prefix}font-family-base: Poppins, Arial;
+  --#{$prefix}font-family-base: Poppins, Arial, sans-serif;
 
   --#{$prefix}primary: #0091EA;
   --#{$prefix}link-color: #0091EA;
@@ -25,7 +26,12 @@
   --#{$prefix}button-info-bg: #0065A3;
   --#{$prefix}button-info-border-color: #0065A3;
   --#{$prefix}button-info-badge-color: #0065A3;
+
+  --gn-jumbotron-bg: rgba(0, 0, 0, 0.1);
 }
+
+
+
 
 .msgapi .gn-theme-custom {
   /* this variables should be generated from lesscss files */
@@ -219,5 +225,3 @@
   --gn-button-tray-badge-color: #ffffff;
   --gn-button-tray-badge-bg: #1a1a1a;
 }
-
-
