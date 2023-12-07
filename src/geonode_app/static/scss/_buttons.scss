@@ -3,6 +3,8 @@
   box-shadow: none;
   border: none;
 
+  padding: 6px 10px;
+
   &.focus, &:focus {
     box-shadow: none;
   }
@@ -10,6 +12,6 @@
 
 .msgapi .btn-primary {
   &:hover {
-    
+
   }
 }

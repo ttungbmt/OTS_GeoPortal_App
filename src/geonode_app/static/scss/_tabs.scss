@@ -1,0 +1,7 @@
+.msgapi .nav-tabs > li > a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  border-radius: var(--#{$prefix}border-radius) var(--#{$prefix}border-radius) 0 0;
+}

@@ -25,5 +25,6 @@
   border-radius: var(--#{$prefix}border-radius);
 }
 
-@import "geonode/hero"
+@import "geonode/hero";
+@import "geonode/metadata";
 

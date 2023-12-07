@@ -1,18 +1,16 @@
 :root {
   --#{$prefix}border-radius: #{$border-radius};
-  --gn-font-family-base: Poppins, Arial;
-}
+  --#{$prefix}font-family-base: Poppins, Arial;
 
-.msgapi .gn-theme {
   --#{$prefix}main-color: #091e42;
 
-  --#{$prefix}primary: #0091EA;
-  --#{$prefix}link-color: #0091EA;
-  --#{$prefix}footer-link-color: #0091EA;
-  --#{$prefix}loader-primary-color: #0091EA;
-  --#{$prefix}button-primary-bg: #0091EA;
-  --#{$prefix}button-primary-border-color: #0091EA;
-  --#{$prefix}button-primary-badge-color: #0091EA;
+  --#{$prefix}primary: #{$primary};
+  --#{$prefix}link-color: #{$primary};
+  --#{$prefix}footer-link-color: #0f1416;
+  --#{$prefix}loader-primary-color: #{$primary};
+  --#{$prefix}button-primary-bg: #{$primary};
+  --#{$prefix}button-primary-border-color: #{$primary};
+  --#{$prefix}button-primary-badge-color: #{$primary};
 
   --#{$prefix}timeline-histogram-color: #0180CA;
   --#{$prefix}button-primary-focus-bg: #0180CA;
@@ -28,9 +26,6 @@
 
   --#{$prefix}jumbotron-bg: rgba(0, 0, 0, 0.1);
 }
-
-
-
 
 .msgapi .gn-theme-custom {
   /* this variables should be generated from lesscss files */

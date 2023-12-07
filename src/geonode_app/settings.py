@@ -232,7 +232,7 @@ MAPSTORE_BASELAYERS = [
         "visibility": True,
         "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
         "thumbURL": f"https://a.basemaps.cartocdn.com/light_all/0/0/0.png",
-        "attribution": '© <a href="http://maps.vietbando.com/maps">Vietbando</a>.'
+        "attribution": '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }
 ] + MAPSTORE_BASELAYERS
 

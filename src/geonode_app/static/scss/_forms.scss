@@ -8,3 +8,14 @@
     border-radius: var(--#{$prefix}border-radius);
   }
 }
+
+form input {
+  border-radius: var(--#{$prefix}border-radius);
+  padding: 8px 12px;
+  outline: none;
+}
+
+.tox.tox-tinymce {
+  border-radius: var(--#{$prefix}border-radius)!important;
+}
+
