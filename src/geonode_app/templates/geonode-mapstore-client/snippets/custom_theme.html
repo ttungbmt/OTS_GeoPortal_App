@@ -1,3 +1,7 @@
+{% load static %}
+
+<link href="{% static 'css/site_base.css' %}" rel="stylesheet" />
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ttungbmt/typeface-poppins/index.min.css">
 
 <style>
@@ -8,7 +12,8 @@
 {% block content %}
     {% comment %}
     <!-- example of custom theme -->
-    <style>
+    <style>      
+
         /* structure of the selector for a custom theme .gn-theme-{variant} */
         .msgapi .gn-theme-custom {
             /* this variables should be generated from lesscss files */

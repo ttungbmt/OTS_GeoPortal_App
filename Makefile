@@ -1,6 +1,7 @@
 env:
 	python create-envfile.py \
 		--hostname localhost \
+		--env_type dev \
 		--email admin@ots.vn \
 		--geonodepwd geoportal@123 \
 		--geoserverpwd geoserver \

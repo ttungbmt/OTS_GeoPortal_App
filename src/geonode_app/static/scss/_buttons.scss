@@ -1,0 +1,13 @@
+.msgapi .btn {
+  border-radius: var(--#{$prefix}border-radius);
+  box-shadow: none;
+  border: none;
+
+  // padding-top: 8px;
+  // padding-bottom: 8px;
+  // line-height: 125%;
+
+  &.focus, &:focus {
+    box-shadow: none;
+  }
+}

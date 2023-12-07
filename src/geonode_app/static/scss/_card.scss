@@ -1,0 +1,12 @@
+.msgapi .gn-resource-card {
+  border-radius: var(--#{$prefix}border-radius);
+
+  .card-img-top {
+    border-top-left-radius: var(--#{$prefix}border-radius);
+    border-top-right-radius: var(--#{$prefix}border-radius);
+  }
+
+  .gn-card-view-editor a {
+    font-size: 13px;
+  }
+}

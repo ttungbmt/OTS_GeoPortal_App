@@ -1,0 +1,26 @@
+// gn-details-panel
+
+.msgapi .gn-details-info-fields {
+  .gn-details-info-row {
+    .gn-details-info-label {
+      font-weight: 400;
+    }
+  }
+}
+
+
+.msgapi .gn-details-info-table {
+  .table tbody>tr>td {
+    font-weight: 400;
+  }
+}
+
+// legend
+
+.msgapi .gn-legend-wrapper {
+  border-radius: var(--#{$prefix}border-radius);
+}
+
+.msgapi .gn-action-navbar-title {
+  border-radius: var(--#{$prefix}border-radius);
+}

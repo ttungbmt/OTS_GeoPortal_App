@@ -66,3 +66,7 @@ local_settings.py
 .vagrant/
 Vagrantfile
 /.env
+
+celerybeat-schedule
+node_modules
+pnpm-lock.yaml

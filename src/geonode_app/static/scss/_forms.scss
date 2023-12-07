@@ -1,0 +1,10 @@
+#gn-search-bar {
+  min-height: 36px;
+  display: flex;
+
+  border-radius: var(--#{$prefix}border-radius);
+
+  .form-control {
+    border-radius: var(--#{$prefix}border-radius);
+  }
+}

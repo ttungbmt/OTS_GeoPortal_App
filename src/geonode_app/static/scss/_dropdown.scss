@@ -1,0 +1,7 @@
+.msgapi .dropdown-menu {
+  border-radius: var(--#{$prefix}border-radius);
+
+  li button {
+    border-radius: 0;
+  }
+}

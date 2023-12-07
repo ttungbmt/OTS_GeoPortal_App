@@ -1,35 +1,38 @@
-
 :root {
-  --gn-border-radius: 8px;
+  --#{$prefix}border-radius: #{$border-radius};
 }
 
 .msgapi .gn-theme {
-  --gn-main-color: #091e42;
-  --gn-font-family-base: Poppins, Arial;
-  --gn-primary: #0091EA;
-  --gn-link-color: #0091EA;
-  --gn-footer-link-color: #0091EA;
-  --gn-loader-primary-color: #0091EA;
-  --gn-button-primary-bg: #0091EA;
-  --gn-button-primary-border-color: #0091EA;
-  --gn-button-primary-badge-color: #0091EA;
-  --gn-timeline-histogram-color: #0180CA;
-  --gn-button-primary-focus-bg: #0180CA;
-  --gn-button-primary-hover-bg: #0180CA;
-  --gn-button-primary-active-bg: #0180CA;
-  --gn-button-primary-active-hover-bg: #0180CA;
-  --gn-info: #0065A3;
-  --gn-button-info-bg: #0065A3;
-  --gn-button-info-border-color: #0065A3;
-  --gn-button-info-badge-color: #0065A3;
+  --#{$prefix}main-color: #091e42;
+  --#{$prefix}font-family-base: Poppins, Arial;
+
+  --#{$prefix}primary: #0091EA;
+  --#{$prefix}link-color: #0091EA;
+  --#{$prefix}footer-link-color: #0091EA;
+  --#{$prefix}loader-primary-color: #0091EA;
+  --#{$prefix}button-primary-bg: #0091EA;
+  --#{$prefix}button-primary-border-color: #0091EA;
+  --#{$prefix}button-primary-badge-color: #0091EA;
+
+  --#{$prefix}timeline-histogram-color: #0180CA;
+  --#{$prefix}button-primary-focus-bg: #0180CA;
+  --#{$prefix}button-primary-hover-bg: #0180CA;
+  --#{$prefix}button-primary-active-bg: #0180CA;
+
+  --#{$prefix}button-primary-active-hover-bg: #0180CA;
+
+  --#{$prefix}info: #0065A3;
+  --#{$prefix}button-info-bg: #0065A3;
+  --#{$prefix}button-info-border-color: #0065A3;
+  --#{$prefix}button-info-badge-color: #0065A3;
 }
 
 .msgapi .gn-theme-custom {
   /* this variables should be generated from lesscss files */
-  --gn-font-family-sans-serif: "Montserrat", sans-serif;
-  --gn-font-family-serif: Georgia, "Times New Roman", Times, serif;
-  --gn-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-  --gn-font-family-base: "Montserrat", sans-serif;
+  --gn-font-family-sans-serif: 'Montserrat', sans-serif;
+  --gn-font-family-serif: Georgia, 'Times New Roman', Times, serif;
+  --gn-font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --gn-font-family-base: 'Montserrat', sans-serif;
   --gn-main-color: #000000;
   --gn-main-bg: #ffffff;
   --gn-main-border-color: #dddddd;
@@ -217,54 +220,4 @@
   --gn-button-tray-badge-bg: #1a1a1a;
 }
 
-#gn-search-bar {
-  min-height: 36px;
-  display: flex;
-  border-radius: var(--gn-border-radius);
-}
-#gn-search-bar .form-control {
-  border-radius: var(--gn-border-radius);
-}
 
-.msgapi .btn {
-  border-radius: var(--gn-border-radius);
-  box-shadow: none;
-  border: none;
-}
-.msgapi .btn.focus, .msgapi .btn:focus {
-  box-shadow: none;
-}
-
-.msgapi .dropdown-menu {
-  border-radius: var(--gn-border-radius);
-}
-.msgapi .dropdown-menu li button {
-  border-radius: 0;
-}
-
-.msgapi .gn-resource-card {
-  border-radius: var(--gn-border-radius);
-}
-.msgapi .gn-resource-card .card-img-top {
-  border-top-left-radius: var(--gn-border-radius);
-  border-top-right-radius: var(--gn-border-radius);
-}
-.msgapi .gn-resource-card .gn-card-view-editor a {
-  font-size: 13px;
-}
-
-.msgapi .gn-details-info-fields .gn-details-info-row .gn-details-info-label {
-  font-weight: 400;
-}
-
-.msgapi .gn-details-info-table .table tbody > tr > td {
-  font-weight: 400;
-}
-
-.msgapi .gn-legend-wrapper {
-  border-radius: var(--gn-border-radius);
-}
-
-.msgapi .gn-action-navbar-title {
-  border-radius: var(--gn-border-radius);
-}
