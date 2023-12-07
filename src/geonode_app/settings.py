@@ -190,7 +190,7 @@ MAPSTORE_BASELAYERS = [
         "title": "Google Satellite",
         "name": "google",
         "group": "background",
-        "visibility": True,
+        "visibility": False,
         "url": "https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
         "thumbURL": f"https://mt1.google.com/vt/lyrs=s&x=0&y=0&z=0",
         "options": {
@@ -222,12 +222,23 @@ MAPSTORE_BASELAYERS = [
         "url": "https://maps.ots.vn:8035/vbd/tile/raster?Ver=2016&LayerIds=VBD&Y={y}&X={x}&Level={z}",
         "thumbURL": f"https://maps.ots.vn:8035/vbd/tile/raster?Ver=2016&LayerIds=VBD&Y=0&X=0&Level=0",
         "attribution": '© <a href="http://maps.vietbando.com/maps">Vietbando</a>.'
+    },
+    {
+        "type": "tileprovider",
+        "provider": "custom",
+        "title": "CartoDB",
+        "name": "cartodb",
+        "group": "background",
+        "visibility": True,
+        "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "thumbURL": f"https://a.basemaps.cartocdn.com/light_all/0/0/0.png",
+        "attribution": '© <a href="http://maps.vietbando.com/maps">Vietbando</a>.'
     }
 ] + MAPSTORE_BASELAYERS
 
 THUMBNAIL_BACKGROUND = {
     "class": "geonode.thumbs.background.GenericXYZBackground",
     "options": {
-        'url': 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
+        'url': 'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
     },
 }

@@ -3,11 +3,13 @@
   box-shadow: none;
   border: none;
 
-  // padding-top: 8px;
-  // padding-bottom: 8px;
-  // line-height: 125%;
-
   &.focus, &:focus {
     box-shadow: none;
+  }
+}
+
+.msgapi .btn-primary {
+  &:hover {
+    
   }
 }

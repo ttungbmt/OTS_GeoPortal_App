@@ -1,9 +1,15 @@
 .msgapi .gn-hero {
-  background-color: rgb(156 156 156 / 33%)!important;
+  background-color: rgb(156 156 156 / 33%) !important;
 
   .jumbotron {
-    .gn-hero-description h1 {
-      font-weight: 500;
+    .gn-hero-description {
+      h1 {
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 400!important;
+      }
     }
   }
 }
