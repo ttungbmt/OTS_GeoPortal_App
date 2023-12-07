@@ -3,6 +3,77 @@
 <script>
     window.__GEONODE_CONFIG__.overrideLocalConfig = function(localConfig, _) {
         // Here the localConfig can be overridden and/or extended
+        Object.keys(localConfig.plugins).forEach((pageName) => {
+            if (pageName === 'dataset_viewer') {
+                localConfig.plugins[pageName].forEach((plugin) => {
+                    if (plugin.name === 'ActionNavbar') {
+                        plugin.cfg.leftMenuItems.forEach((item) => {
+                            if (item.labelId === 'gnviewer.edit') {
+                                item.items = [
+                                    {
+                                        "type": "plugin",
+                                        "name": "DetailViewerButton"
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'#/dataset/' + (state('gnResourceData') || {}).pk + '/edit/data'}",
+                                        "labelId": "gnviewer.editData",
+                                        "disableIf": "{!context.resourceHasPermission(state('gnResourceData'), 'change_dataset_data')}"
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'/datasets/' + (state('gnResourceData') || {}).alternate + '/replace'}",
+                                        "label": "Replace",
+                                        // "labelId": "gnviewer.replace",
+                                        "disableIf": "{!context.resourceHasPermission(state('gnResourceData'), 'change_dataset_data')}",
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'/datasets/' + (state('gnResourceData') || {}).alternate + '/append'}",
+                                        "disableIf": "{!context.resourceHasPermission(state('gnResourceData'), 'change_dataset_data')}",
+                                        // "labelId": "gnviewer.appendData",
+                                        "label": "Append Data"
+                                    },
+                                    {
+                                        "type": "divider",
+                                        "authenticated": true
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'#/dataset/' + (state('gnResourceData') || {}).pk + '/edit/style'}",
+                                        "labelId": "gnviewer.editStyle",
+                                        "disableIf": "{!context.resourceHasPermission(state('gnResourceData'), 'change_dataset_style')}"
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'/datasets/' + (state('gnResourceData') || {}).alternate + '/style_upload'}",
+                                        "labelId": "gnviewer.styleUpload",
+                                        "disableIf": "{!context.resourceHasPermission(state('gnResourceData'), 'change_dataset_style')}"
+                                    },
+                                    {
+                                        "type": "divider",
+                                        "authenticated": true
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{context.getMetadataUrl(state('gnResourceData'))}",
+                                        "labelId": "gnviewer.editMetadata"
+                                    },
+                                    {
+                                        "type": "link",
+                                        "href": "{'/datasets/' + (state('gnResourceData') || {}).alternate + '/metadata_upload'}",
+                                        "labelId": "gnviewer.metadataUpload"
+                                    },                                    
+                                ]
+                        
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        
         return localConfig;
     };
 </script>
