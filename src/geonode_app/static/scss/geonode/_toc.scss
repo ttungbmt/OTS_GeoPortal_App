@@ -1,0 +1,22 @@
+.msgapi .toc-title {
+  max-width: 210px;
+}
+
+.msgapi .toc-default-group {
+  .toc-default-layer {
+    border-radius: var(--#{$prefix}border-radius);
+
+    .toc-default-layer-head {
+      background: transparent;
+
+      .toc-title {
+        width: 210px;
+      }
+    }
+  }
+
+  .toc-legend {
+    font-size: 11px;
+  }
+}
+
