@@ -4,6 +4,7 @@
 
     .toc-default-layer-head {
       background: transparent;
+      border-radius: var(--#{$prefix}border-radius);
 
       .toc-title {
         width: 210px;
