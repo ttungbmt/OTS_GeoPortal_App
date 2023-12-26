@@ -11,6 +11,11 @@
         max-width: 210px;
       }
     }
+
+    &.selected .toc-default-layer-head {
+      border-top-left-radius: var(--#{$prefix}border-radius);
+      border-top-right-radius: var(--#{$prefix}border-radius);
+    }
   }
 
   .toc-legend {
@@ -23,3 +28,4 @@
     }
   }
 }
+
